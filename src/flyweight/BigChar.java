@@ -20,7 +20,7 @@ public class BigChar {
 	/**
 	 * 字符名字
 	 */
-	private char charname;
+	private char charName;
 	/**
 	 * 大型字符对应的字符串(由1#·\n’组成)
 	 */
@@ -29,10 +29,10 @@ public class BigChar {
 	/**
 	 * 构造函数
 	 */
-	public BigChar(char charname) {
-		this.charname = charname;
+	public BigChar(char charName) {
+		this.charName = charName;
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("big" + charname + ".txt"));
+			BufferedReader reader = new BufferedReader(new FileReader("big" + charName + ".txt"));
 			String line;
 			StringBuffer buf = new StringBuffer();
 			while ((line = reader.readLine()) != null) {
@@ -42,7 +42,7 @@ public class BigChar {
 				this.fontdata = buf.toString();
 			}
 		} catch (IOException e) {
-			this.fontdata = charname + "?";
+			this.fontdata = charName + "?";
 		}
 	}
 
